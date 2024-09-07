@@ -189,29 +189,29 @@ public class DataCollectActivity extends Activity implements SensorEventListener
 
         switch (event.sensor.getType()) {
             case Sensor.TYPE_ACCELEROMETER:
-                dataFileWriter.writeToFile("Accelerometer", sensorValuesList);
+//                dataFileWriter.writeToFile("Accelerometer", sensorValuesList);
                 accData = event.values.clone();
                 gotAccData = true;
                 break;
             case Sensor.TYPE_LINEAR_ACCELERATION:
-                dataFileWriter.writeToFile("Linear_Acceleration", sensorValuesList);
+//                dataFileWriter.writeToFile("Linear_Acceleration", sensorValuesList);
                 break;
             case Sensor.TYPE_GYROSCOPE:
-                dataFileWriter.writeToFile("Gyroscope_Calibrated", sensorValuesList);
+//                dataFileWriter.writeToFile("Gyroscope_Calibrated", sensorValuesList);
                 break;
             case Sensor.TYPE_GYROSCOPE_UNCALIBRATED:
-                dataFileWriter.writeToFile("Gyroscope_Uncalibrated", sensorValuesList);
+//                dataFileWriter.writeToFile("Gyroscope_Uncalibrated", sensorValuesList);
                 break;
             case Sensor.TYPE_MAGNETIC_FIELD:
-                dataFileWriter.writeToFile("Magnetic_Field", sensorValuesList);
+//                dataFileWriter.writeToFile("Magnetic_Field", sensorValuesList);
                 magData = event.values.clone();
                 gotMagData = true;
                 break;
             case Sensor.TYPE_MAGNETIC_FIELD_UNCALIBRATED:
-                dataFileWriter.writeToFile("Magnetic_Field_Uncalibrated", sensorValuesList);
+//                dataFileWriter.writeToFile("Magnetic_Field_Uncalibrated", sensorValuesList);
                 break;
             case Sensor.TYPE_GRAVITY:
-                dataFileWriter.writeToFile("Gravity", sensorValuesList);
+//                dataFileWriter.writeToFile("Gravity", sensorValuesList);
                 break;
 
         }

@@ -368,7 +368,7 @@ public class GraphActivity extends AppCompatActivity implements SensorEventListe
             if (event.sensor.getType() == Sensor.TYPE_GRAVITY) {
                 ArrayList<Float> dataValues = ExtraFunctions.arrayToList(event.values);
                 dataValues.add(0, (float)(event.timestamp - startTime));
-                dataFileWriter.writeToFile("Gravity", dataValues);
+//                dataFileWriter.writeToFile("Gravity", dataValues);
             } else if (event.sensor.getType() == Sensor.TYPE_MAGNETIC_FIELD || event.sensor.getType() ==
                     Sensor.TYPE_MAGNETIC_FIELD_UNCALIBRATED) {
 
@@ -383,7 +383,7 @@ public class GraphActivity extends AppCompatActivity implements SensorEventListe
                 );
                 dataValues.add(0, (float)(event.timestamp - startTime));
                 dataValues.add(magHeading);
-                dataFileWriter.writeToFile("Magnetic_Field_Uncalibrated", dataValues);
+//                dataFileWriter.writeToFile("Magnetic_Field_Uncalibrated", dataValues);
 
             } else if (event.sensor.getType() == Sensor.TYPE_GYROSCOPE ||
                     event.sensor.getType() == Sensor.TYPE_GYROSCOPE_UNCALIBRATED) {
@@ -402,7 +402,7 @@ public class GraphActivity extends AppCompatActivity implements SensorEventListe
                 );
                 dataValues.add(0, (float)(event.timestamp - startTime));
                 dataValues.add(gyroHeading);
-                dataFileWriter.writeToFile("Gyroscope_Uncalibrated", dataValues);
+//                dataFileWriter.writeToFile("Gyroscope_Uncalibrated", dataValues);
 
             } else if (event.sensor.getType() == Sensor.TYPE_LINEAR_ACCELERATION) {
 
@@ -421,7 +421,7 @@ public class GraphActivity extends AppCompatActivity implements SensorEventListe
                     ArrayList<Float> dataValues = ExtraFunctions.arrayToList(event.values);
                     dataValues.add(0, (float)(event.timestamp - startTime));
                     dataValues.add(1f);
-                    dataFileWriter.writeToFile("Linear_Acceleration", dataValues);
+//                    dataFileWriter.writeToFile("Linear_Acceleration", dataValues);
 
                     //complimentary filter
                     float compHeading = ExtraFunctions.calcCompHeading(magHeading, gyroHeading);
@@ -443,17 +443,17 @@ public class GraphActivity extends AppCompatActivity implements SensorEventListe
                     scatterPlot.addPoint(rPointX, rPointY);
 
                     //saving XY location data
-                    dataFileWriter.writeToFile("XY_Data_Set",
-                            weeksGPS,
-                            secondsGPS,
-                            (event.timestamp - startTime),
-                            strideLength,
-                            magHeading,
-                            gyroHeading,
-                            oPointX,
-                            oPointY,
-                            rPointX,
-                            rPointY);
+//                    dataFileWriter.writeToFile("XY_Data_Set",
+//                            weeksGPS,
+//                            secondsGPS,
+//                            (event.timestamp - startTime),
+//                            strideLength,
+//                            magHeading,
+//                            gyroHeading,
+//                            oPointX,
+//                            oPointY,
+//                            rPointX,
+//                            rPointY);
 
                     mLinearLayout.removeAllViews();
                     mLinearLayout.addView(scatterPlot.getGraphView(getApplicationContext()));
@@ -464,7 +464,7 @@ public class GraphActivity extends AppCompatActivity implements SensorEventListe
                     ArrayList<Float> dataValues = ExtraFunctions.arrayToList(event.values);
                     dataValues.add(0, (float) event.timestamp);
                     dataValues.add(0f);
-                    dataFileWriter.writeToFile("Linear_Acceleration", dataValues);
+//                    dataFileWriter.writeToFile("Linear_Acceleration", dataValues);
                 }
 
             } else if (event.sensor.getType() == Sensor.TYPE_STEP_DETECTOR) {
@@ -493,17 +493,17 @@ public class GraphActivity extends AppCompatActivity implements SensorEventListe
                     scatterPlot.addPoint(rPointX, rPointY);
 
                     //saving XY location data
-                    dataFileWriter.writeToFile("XY_Data_Set",
-                            weeksGPS,
-                            secondsGPS,
-                            (event.timestamp - startTime),
-                            strideLength,
-                            magHeading,
-                            gyroHeading,
-                            oPointX,
-                            oPointY,
-                            rPointX,
-                            rPointY);
+//                    dataFileWriter.writeToFile("XY_Data_Set",
+//                            weeksGPS,
+//                            secondsGPS,
+//                            (event.timestamp - startTime),
+//                            strideLength,
+//                            magHeading,
+//                            gyroHeading,
+//                            oPointX,
+//                            oPointY,
+//                            rPointX,
+//                            rPointY);
 
                     mLinearLayout.removeAllViews();
                     mLinearLayout.addView(scatterPlot.getGraphView(getApplicationContext()));
